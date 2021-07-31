@@ -1,0 +1,9 @@
+<p>home works!</p>
+<div class="home-content">
+  <input [(ngModel)]="text" (ngModelChange)="onChange($event)" type="text" placeholder="Enter pokemon here" style="padding:10px" name="pokemon-input"/>
+</div>
+<div class="list-pokemons" style="width:60%; padding: 2vh 20%; display: flex;flex-wrap: wrap; justify-content: center;">
+  <div class="pokemon" style="color:blueviolet" *ngFor="let pokemon of filteredPokemon">
+    <a [routerLink]="['/about/' + urlIdLookup[pokemon.name]]" style=" padding:10px;display: inline-block;">{{pokemon.name}}</a>
+  </div>
+</div>

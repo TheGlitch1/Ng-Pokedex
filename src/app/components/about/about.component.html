@@ -1,0 +1,15 @@
+<div class="about-section" *ngIf="pokemonObs | async as pokemon">
+  <h3 style="padding:10px;">{{pokemon.name}}</h3>
+  <div class="about-media">
+    <img class="" alt="" [src]="pokemon.sprites.front_shiny" width="13%">
+    <img class="" alt="" [src]="pokemon.sprites.back_shiny" width="13%">
+  </div>
+  <h4 style="margin-top:10px;padding:10px;">types</h4>
+  <div class="about-types" *ngFor="let type of pokemon.types">
+    <h5 class="types-content">{{type.type.name}}</h5>
+    <h5 class="types-content">{{type.type.url}}</h5>
+  </div>
+</div>
+
+<!-- <h2>about route : {{routeParam}}</h2> -->
+
